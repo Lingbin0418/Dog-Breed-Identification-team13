@@ -32,7 +32,7 @@
 
 ## 📊 訓練配置與效能分析表
 
-| 配置編號 | Log Loss 分數 | 學習率排程 | 最大序列長度 | LoRA | 批量大小變化 | Deberta 平均 ROC-AUC | Roberta 平均 ROC-AUC | Roberta 穩定性 | 分析結果 |
+| 配置編號 | Kaggle 分數 | 學習率排程 | 最大序列長度 | LoRA | 批量大小變化 | Deberta 平均 ROC-AUC | Roberta 平均 ROC-AUC | Roberta 穩定性 | 分析結果 |
 |----------|----------------|------------|----------------|------|----------------|------------------------|------------------------|----------------|------------|
 | 15       | 0.83144        | Linear     | 128            | 是   | 8,16,16         | 0.5384                 | 0.5365                 | 穩定           | LoRA 顯著提升 Roberta 穩定性，避免災難性失敗。 |
 | 16       | 0.84921        | Linear     | 128            | 否   | 8,16,16         | 0.5406                 | 0.5385                 | 不穩定（全預測負類） | 無 LoRA 導致 Roberta 災難性失敗。 |
@@ -66,3 +66,22 @@ pip install -r requirements.txt
 ```
 
 以上為本次 Kaggle 專案之完整內容說明，歡迎交流指教！
+
+## 模型架構
+使用預訓練的 EfficientNet-B0 模型作為 backbone，並自訂最後的全連接層如下：
+
+- 替換 EfficientNet 的分類頭為新的 Linear 層，輸出類別數為 120
+- 輸出經過 Softmax 層計算每個類別的機率
+
+## 執行環境
+- Python 3.x  
+- PyTorch  
+- torchvision  
+- pandas, sklearn  
+- PIL  
+- CUDA（Kaggle 提供 GPU）
+
+## 備註
+- 測試集預測前請移除 `.jpg` 副檔名以符合提交格式
+
+
