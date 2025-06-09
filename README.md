@@ -43,20 +43,15 @@
 |DenseNet       | 0.84058        | 0.746    | 0.9            | 
 ## 🏆 最高分程式碼完整版（最高分程式碼完整版/）
 
-此資料夾包含兩個子資料夾 `py/` 和 `ipynb/`，兩者內容相同，僅格式不同，方便使用者依照喜好選擇。
+### 📂 不同模型訓練結果/ 資料夾內容
 
-### 📂 py/ 資料夾內容
-
-- `No_17(score_0_85167).py`：第 17 版完整訓練腳本（最高分模型）  
-- `資料探索.py`：資料探索程式  
-- `requirements.txt`：Python 套件需求清單  
-- `train.csv`、`test.csv`、`sample_submission.csv`
-
-### 📂 ipynb/ 資料夾內容
-
-- `No_17(score_0_85167).ipynb`：第 17 版完整 Jupyter Notebook（最高分模型）  
-- `資料探索.ipynb`：資料探索筆記本  
-- 其他檔案與 `py/` 相同
+- `1.dog-breed-cnn.ipynb' 
+- `2.dog-breed-xception.ipynb'
+- `3.dog-breed-efficient.ipynb'
+- `4.dog-breed-Resnet50.ipynb'
+- `5.dog-breed-Resnext50.ipynb'
+- `5.dog-breed-Resnext101.ipynb'
+- `6.dog-breed-dense.ipynb'
 
 ## 🚀 使用方式
 
@@ -65,7 +60,10 @@
 ```bash
 pip install -r requirements.txt
 ```
-
+### 下載資料集連結
+```bash
+(https://www.kaggle.com/competitions/dog-breed-identification/data)
+```
 以上為本次 Kaggle 專案之完整內容說明！
 
 ## 模型架構
