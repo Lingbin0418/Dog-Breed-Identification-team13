@@ -59,7 +59,7 @@
 ```bash
 pip install -r requirements.txt
 ```
-### 下載資料集連結
+### 資料集下載連結
 ```bash
 (https://www.kaggle.com/competitions/dog-breed-identification/data)
 ```
