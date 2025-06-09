@@ -66,7 +66,7 @@
 pip install -r requirements.txt
 ```
 
-以上為本次 Kaggle 專案之完整內容說明，歡迎交流指教！
+以上為本次 Kaggle 專案之完整內容說明！
 
 ## 模型架構
 使用預訓練的 EfficientNet-B0 模型作為 backbone，並自訂最後的全連接層如下：
